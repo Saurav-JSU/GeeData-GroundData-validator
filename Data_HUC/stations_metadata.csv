@@ -1,6 +1,0 @@
-id,name,country,region,wmo,icao,latitude,longitude,elevation,timezone,hourly_start,hourly_end,daily_start,daily_end,monthly_start,monthly_end
-72703,East Hodgdon,US,ME,72703,KHUL,46.12,-67.8,150.0,America/New_York,2000-01-01,2025-04-01,2000-09-02,2022-04-25,2001-01-01,2022-01-01
-72711,Clayton Lake,US,ME,72711,K40B,46.61,-69.52,314.0,America/New_York,2008-11-25,2025-04-01,2017-01-22,2020-01-12,,
-72712,Caribou Municipal Airport,US,ME,72712,KCAR,46.8667,-68.0167,191.0,America/New_York,1973-01-01,2025-04-01,1939-01-16,2025-03-29,1939-01-01,2022-01-01
-72713,Presque Isle,US,ME,72713,KPQI,46.6833,-68.05,163.0,America/New_York,1941-11-01,2025-04-01,1941-11-02,2022-04-25,1942-01-01,2022-01-01
-KFVE0,Frenchville / Saint Agatha,US,ME,,KFVE,47.2855,-68.3127,301.0,America/New_York,2006-01-01,2025-04-01,2006-01-03,2022-04-24,2006-01-01,2022-01-01
