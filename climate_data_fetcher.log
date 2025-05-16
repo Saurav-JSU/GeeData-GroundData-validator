@@ -4638,3 +4638,63 @@ TypeError: 'numpy.ndarray' object is not callable
 2025-04-29 10:29:01,254 - src.analysis.statistical_analyzer - INFO - Analysis complete!
 2025-04-29 10:29:02,612 - controller.app_controller - INFO - Analysis completed
 2025-04-29 10:29:03,336 - ui.app_window - INFO - Switched to Visualization tab
+2025-05-15 22:40:02,463 - __main__ - INFO - Starting Climate Data Fetcher Application
+2025-05-15 22:40:03,111 - controller.data_fetching_controller - INFO - DataFetchingController initialized
+2025-05-15 22:40:03,111 - controller.analysis_controller - INFO - AnalysisController initialized
+2025-05-15 22:40:03,112 - controller.visualization_controller - INFO - VisualizationController initialized
+2025-05-15 22:40:03,114 - controller.app_controller - INFO - Created directories: C:\Users\J01013381\Desktop\GeeData-GroundData-validator-1\Data, C:\Users\J01013381\Desktop\GeeData-GroundData-validator-1\Results, C:\Users\J01013381\Desktop\GeeData-GroundData-validator-1\Plots
+2025-05-15 22:40:03,114 - controller.app_controller - INFO - AppController initialized
+2025-05-15 22:40:03,150 - ui.panels.data_selection_panel - WARNING - No Earth Engine project ID configured, using default
+2025-05-15 22:40:03,684 - ui.panels.data_selection_panel - INFO - Data Selection Panel initialized
+2025-05-15 22:40:03,743 - ui.panels.analysis_panel - INFO - Analysis Panel initialized
+2025-05-15 22:40:03,767 - ui.panels.visualization_panel - INFO - Visualization Panel initialized
+2025-05-15 22:40:03,790 - ui.panels.earth_engine_panel - INFO - Earth Engine Panel initialized
+2025-05-15 22:40:03,801 - ui.app_window - INFO - Application window initialized
+2025-05-15 22:40:04,704 - utils.huc_utils - INFO - Loading HUC metadata from cache: Data\HUC\huc_metadata.csv
+2025-05-15 22:40:10,180 - ui.app_window - INFO - Switched to Earth Engine tab
+2025-05-15 22:40:11,255 - utils.config_manager - INFO - Configuration saved to C:\Users\J01013381\.climate_data_fetcher\config.json
+2025-05-15 22:40:11,255 - ui.panels.earth_engine_panel - INFO - Earth Engine configuration saved
+2025-05-15 22:40:11,255 - controller.app_controller - INFO - Updating Earth Engine project ID across all components: ee-sauravbhattarai1999
+2025-05-15 22:40:12,278 - ui.panels.earth_engine_panel - INFO - Updated draw_selection_widget with new project ID: ee-sauravbhattarai1999
+2025-05-15 22:40:15,049 - utils.earth_engine_utils - INFO - Initializing Earth Engine with project ID: ee-sauravbhattarai1999
+2025-05-15 22:40:16,129 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-15 22:40:16,130 - utils.earth_engine_utils - ERROR - Failed to initialize Earth Engine: Caller does not have required permission to use project ee-sauravbhattarai1999. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam/project?project=ee-sauravbhattarai1999 and then retry. Propagation of the new permission may take a few minutes.
+2025-05-15 22:40:17,131 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-15 22:40:17,586 - ui.app_window - INFO - Switched to Data Selection tab
+2025-05-15 22:40:29,599 - ui.panels.data_selection_panel - INFO - Starting data download with config: {'data_type': 'both', 'start_year': 2022, 'end_year': 2024, 'selection_type': 'states', 'states': ['MT'], 'drawn_feature': None, 'huc_id': None, 'gridded_datasets': ['DAYMET', 'PRISM'], 'ee_project_id': 'ee-sauravbhattarai1999'}
+2025-05-15 22:40:29,600 - controller.app_controller - INFO - Starting data fetching process
+2025-05-15 22:40:29,604 - controller.data_fetching_controller - INFO - Fetching ground data
+2025-05-15 22:40:29,604 - controller.data_fetching_controller - INFO - Started data fetching thread for both data
+2025-05-15 22:40:29,606 - src.data.ground_fetcher - INFO - Fetching ground data...
+2025-05-15 22:40:29,606 - src.data.ground_fetcher - INFO - Fetching new station metadata...
+2025-05-15 22:40:30,836 - src.data.ground_fetcher - INFO - Saved station metadata to C:\Users\J01013381\Desktop\GeeData-GroundData-validator-1\Data\stations_metadata.csv
+2025-05-15 22:41:06,870 - src.data.ground_fetcher - INFO - Saved ground data to C:\Users\J01013381\Desktop\GeeData-GroundData-validator-1\Data\ground_daily_precipitation.csv
+2025-05-15 22:41:06,871 - controller.data_fetching_controller - INFO - Ground data fetching completed
+2025-05-15 22:41:06,871 - controller.data_fetching_controller - INFO - Fetching gridded data
+2025-05-15 22:41:06,871 - src.data.gridded_fetcher - INFO - Fetching gridded data...
+2025-05-15 22:41:06,871 - src.data.gridded_fetcher - INFO - Initializing Earth Engine with project ID: ee-sauravbhattarai1999
+2025-05-15 22:41:07,741 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-15 22:41:07,742 - src.data.gridded_fetcher - ERROR - Failed to initialize Earth Engine: Caller does not have required permission to use project ee-sauravbhattarai1999. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam/project?project=ee-sauravbhattarai1999 and then retry. Propagation of the new permission may take a few minutes.
+2025-05-15 22:41:07,742 - src.data.gridded_fetcher - ERROR - Earth Engine initialization failed. Cannot fetch real data.
+2025-05-15 22:41:07,743 - controller.data_fetching_controller - ERROR - Error fetching data: Gridded data validation failed
+Traceback (most recent call last):
+  File "C:\Users\J01013381\Desktop\GeeData-GroundData-validator-1\controller\data_fetching_controller.py", line 124, in _fetch_data_thread
+    gridded_results = fetcher.process()
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\J01013381\Desktop\GeeData-GroundData-validator-1\src\data\gridded_fetcher.py", line 639, in process
+    raise ValueError("Gridded data validation failed")
+ValueError: Gridded data validation failed
+2025-05-15 22:41:12,504 - ui.app_window - INFO - Switched to Earth Engine tab
+2025-05-15 22:41:13,481 - utils.config_manager - INFO - Configuration saved to C:\Users\J01013381\.climate_data_fetcher\config.json
+2025-05-15 22:41:13,482 - ui.panels.earth_engine_panel - INFO - Earth Engine configuration saved
+2025-05-15 22:41:13,482 - controller.app_controller - INFO - Updating Earth Engine project ID across all components: ee-sauravbhattarai1999
+2025-05-15 22:41:14,251 - ui.panels.earth_engine_panel - INFO - Updated draw_selection_widget with new project ID: ee-sauravbhattarai1999
+2025-05-15 22:41:16,137 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-15 22:41:16,137 - utils.earth_engine_utils - INFO - Initializing Earth Engine with project ID: ee-sauravbhattarai1999
+2025-05-15 22:41:16,930 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-15 22:41:16,930 - utils.earth_engine_utils - ERROR - Failed to initialize Earth Engine: Caller does not have required permission to use project ee-sauravbhattarai1999. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam/project?project=ee-sauravbhattarai1999 and then retry. Propagation of the new permission may take a few minutes.
+2025-05-15 22:41:18,534 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "PERMISSION_DENIED"
+2025-05-15 22:41:29,250 - utils.config_manager - INFO - Configuration saved to C:\Users\J01013381\.climate_data_fetcher\config.json
+2025-05-15 22:41:29,250 - ui.panels.earth_engine_panel - INFO - Earth Engine configuration saved
+2025-05-15 22:41:29,251 - controller.app_controller - INFO - Updating Earth Engine project ID across all components: ee-jsuhydrolabenb
+2025-05-15 22:41:30,060 - ui.panels.earth_engine_panel - INFO - Updated draw_selection_widget with new project ID: ee-jsuhydrolabenb

@@ -6,25 +6,7 @@ A comprehensive PyQt5 application for retrieving, analyzing, and visualizing pre
 
 ## 🔧 Installation
 
-### Option 1: Using Conda (Recommended)
-
-```bash
-# Clone the repository
-git clone https://github.com/Saurav-JSU/GeeData-GroundData-validator.git
-cd GeeData-GroundData-validator
-
-# Create and activate conda environment
-conda create -n climate-data-fetcher python=3.8
-conda activate climate-data-fetcher
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set up Earth Engine authentication
-earthengine authenticate
-```
-
-### Option 2: Using Pip and venv
+### Option 1: Using Pip and venv
 
 ```bash
 # Clone the repository
@@ -38,6 +20,24 @@ python -m venv venv
 venv\Scripts\activate
 # On macOS/Linux:
 source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up Earth Engine authentication
+earthengine authenticate
+```
+
+### Option 2: Using Conda
+
+```bash
+# Clone the repository
+git clone https://github.com/Saurav-JSU/GeeData-GroundData-validator.git
+cd GeeData-GroundData-validator
+
+# Create and activate conda environment
+conda create -n climate-data-fetcher python=3.8
+conda activate climate-data-fetcher
 
 # Install dependencies
 pip install -r requirements.txt
